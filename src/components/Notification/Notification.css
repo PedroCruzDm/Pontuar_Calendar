@@ -1,0 +1,110 @@
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.notification.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.notification.hide {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.notification.success {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+}
+
+.notification.error {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+  color: white;
+}
+
+.notification.info {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: white;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+}
+
+.notification-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.notification-message {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: currentColor;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.notification-close:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Animações responsivas */
+@media (max-width: 768px) {
+  .notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+/* Animação de entrada mais suave */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

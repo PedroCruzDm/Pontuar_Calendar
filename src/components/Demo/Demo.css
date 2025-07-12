@@ -1,0 +1,151 @@
+.demo-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.demo-card {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.demo-card h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.demo-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.demo-section h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.demo-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.demo-section li {
+  margin-bottom: 10px;
+  padding: 8px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+.demo-section li:before {
+  content: "✓ ";
+  color: #28a745;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.link-demo {
+  background: #f1f3f4;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border: 1px solid #e0e0e0;
+}
+
+.link-demo code {
+  color: #667eea;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.demo-note {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.demo-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.demo-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.demo-button:not(.secondary) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.demo-button.secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.demo-button:hover:not(.secondary) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.demo-button.secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .demo-container {
+    padding: 10px;
+    margin: 20px auto;
+  }
+  
+  .demo-card {
+    padding: 20px;
+  }
+  
+  .demo-card h2 {
+    font-size: 24px;
+  }
+  
+  .demo-section {
+    padding: 15px;
+  }
+  
+  .demo-section h3 {
+    font-size: 18px;
+  }
+  
+  .demo-section li {
+    font-size: 14px;
+  }
+  
+  .demo-actions {
+    flex-direction: column;
+  }
+  
+  .demo-button {
+    width: 100%;
+  }
+}

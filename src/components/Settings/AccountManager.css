@@ -1,0 +1,294 @@
+/* AccountManager.css */
+.account-manager {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.account-manager-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.account-manager-header h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.account-manager-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.account-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #ff6b35;
+  background-color: #fff5f2;
+}
+
+.tab-button.active {
+  color: #ff6b35;
+  border-bottom-color: #ff6b35;
+  font-weight: 600;
+}
+
+.tab-icon {
+  font-size: 18px;
+}
+
+.account-message {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.account-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.account-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.account-content {
+  background-color: #fafafa;
+  padding: 30px;
+  border-radius: 8px;
+  min-height: 400px;
+}
+
+.profile-section h3,
+.password-section h3,
+.delete-section h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.form-group input:disabled {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 4px;
+  color: #666;
+  font-size: 14px;
+}
+
+.update-button {
+  background-color: #ff6b35;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-button:hover:not(:disabled) {
+  background-color: #e55a2e;
+}
+
+.update-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.warning-box {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.warning-box p {
+  margin-bottom: 10px;
+  color: #856404;
+}
+
+.warning-box ul {
+  color: #856404;
+  margin-left: 20px;
+}
+
+.warning-box li {
+  margin-bottom: 5px;
+}
+
+.danger-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.danger-button:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.delete-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.delete-button:disabled,
+.cancel-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .account-manager {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .account-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-button {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+  
+  .account-content {
+    padding: 20px;
+  }
+  
+  .delete-buttons {
+    flex-direction: column;
+  }
+  
+  .delete-buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-manager-header h2 {
+    font-size: 24px;
+  }
+  
+  .account-manager-header p {
+    font-size: 14px;
+  }
+  
+  .form-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  .update-button,
+  .danger-button,
+  .cancel-button,
+  .delete-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
